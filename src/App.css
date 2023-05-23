@@ -1,38 +1,89 @@
-.App {
-  text-align: center;
+:root{
+  --maron:#4B0101;
+  --bg:#F7F7F7;
+  --green:#45A51F;
+  --black:#000101;
+  --orange:#D94224;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+::before,::after {
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+BODY{
+  background-color: #4B0101;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.header{
+  display:flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 8rem;
+  padding-inline:2rem ;
+  background: var(--bg);
+}
+.title {
+  font-family: 'Creepster', cursive;
+  color: var(--maron);
+  font-size: 4ch;
+}
+.logo{
+  width: 8rem;
+  aspect-ratio: 1;
+  align-items: center;
+}
+.form {
+  padding: 2rem;
+  display: grid;
+  grid-template: 4rem  4rem / 1fr 1fr;
+  gap: 3rem;
+}
+.form-input{
+  background: var(--bg);
+  outline: none;
+  border-radius: .7rem;
+}
+input::-webkit-input-placeholder {
+  color: #D94224;
+  padding: 2ch;
+  font-size: 2ch;
+}
+.form-botton {
+  grid-column: 1 / -1;
+  background: var(--green);
+  color: #F7F7F7;
+  font-weight: 700;
+  font-size: 2ch;
+  border-radius: .7rem;
+
+}
+.form--button {
+  grid-column: 1 / -1;
+  border-radius: 5px;
+  background: var(--green)
   color: white;
+  border: none;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.meme {
+  position: relative;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.meme--image {
+  width: 100%;
+  border-radius: 3px;
+}
+.meme--text {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+    2px 2px 5px #000;
 }
