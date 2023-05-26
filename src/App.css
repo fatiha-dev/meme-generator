@@ -58,7 +58,7 @@ input::-webkit-input-placeholder {
 .form--button {
   grid-column: 1 / -1;
   border-radius: 5px;
-  background: var(--green)
+  background: var(--green);
   color: white;
   border: none;
   cursor: pointer;
